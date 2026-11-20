@@ -1,0 +1,1478 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>新浪日本电影网 - 品牌影像门户|日影佳作与创作者社区</title>
+<meta name="description" content="新浪日本电影网官方网站，聚焦日本电影佳作、导演访谈与影迷社区，以原创正版高清内容与专业策展，持续运营高品质日影内容生态。">
+<meta name="keywords" content="新浪日本电影网,日本电影,日影,官方网站,品牌,创作者,社区">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f1b2d'/%3E%3Ccircle cx='32' cy='32' r='15' fill='none' stroke='%23ff4d5e' stroke-width='3'/%3E%3Cpath d='M27 24l14 8-14 8z' fill='%23ff4d5e'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"新浪日本电影网","description":"新浪日本电影网官方网站，聚焦日本电影佳作与影迷社区的品牌影像门户。","foundingDate":"2016","slogan":"让每一部日影被认真看见"}
+</script>
+<style>
+:root{
+  --sjf-ink:#0f1b2d;
+  --sjf-ink-2:#16263d;
+  --sjf-paper:#f5f6f8;
+  --sjf-card:#ffffff;
+  --sjf-red:#e03a4a;
+  --sjf-red-deep:#b62a3a;
+  --sjf-gold:#e8b464;
+  --sjf-line:#e2e6ec;
+  --sjf-muted:#6a7688;
+  --sjf-radius:14px;
+  --sjf-shadow:0 10px 30px rgba(15,27,45,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  color:var(--sjf-ink);
+  background:var(--sjf-paper);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer}
+.sjf-wrap{width:min(1200px,92vw);margin:0 auto}
+.sjf-anchor{scroll-margin-top:112px}
+
+/* ============ 吸顶区：公告条 + 页头 ============ */
+.sjf-sticky{position:sticky;top:0;z-index:80}
+.sjf-notice{
+  background:linear-gradient(90deg,var(--sjf-red-deep),var(--sjf-red));
+  color:#fff;font-size:13.5px;
+  display:flex;align-items:center;gap:14px;
+  padding:7px 0;
+}
+.sjf-notice .sjf-wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sjf-notice-tag{
+  flex:0 0 auto;background:#fff;color:var(--sjf-red-deep);
+  font-weight:700;font-size:12px;letter-spacing:.06em;
+  padding:1px 9px;border-radius:20px;
+}
+.sjf-notice-list{display:flex;gap:22px;flex-wrap:wrap;overflow:hidden}
+.sjf-notice-item{white-space:nowrap;opacity:.95}
+.sjf-notice-item b{color:#ffe3a8;font-weight:600}
+
+.sjf-header{
+  background:rgba(15,27,45,.97);
+  backdrop-filter:blur(10px);
+  color:#eef2f8;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.sjf-nav{display:flex;align-items:center;gap:22px;height:66px}
+.sjf-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.sjf-logo-mark{
+  width:38px;height:38px;border-radius:10px;flex:0 0 auto;
+  background:linear-gradient(135deg,#ff5a6a,#b62a3a);
+  display:grid;place-items:center;color:#fff;font-weight:800;font-size:17px;
+  box-shadow:0 4px 14px rgba(224,58,74,.4);
+}
+.sjf-logo-text strong{display:block;font-size:17px;letter-spacing:.02em;line-height:1.2}
+.sjf-logo-text span{display:block;font-size:10.5px;letter-spacing:.22em;color:#8ea0bb;text-transform:uppercase}
+.sjf-menu{display:flex;gap:4px;margin-left:8px;flex:1 1 auto}
+.sjf-menu a{
+  font-size:14.5px;padding:8px 13px;border-radius:8px;color:#c9d4e4;
+  transition:background .2s,color .2s;
+}
+.sjf-menu a:hover{background:rgba(255,255,255,.09);color:#fff}
+.sjf-nav-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.sjf-search{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);
+  border-radius:24px;padding:5px 6px 5px 14px;
+}
+.sjf-search input{
+  background:transparent;border:0;outline:0;color:#fff;width:150px;font-size:13.5px;
+}
+.sjf-search input::placeholder{color:#93a3ba}
+.sjf-search button{
+  border:0;border-radius:18px;padding:5px 14px;
+  background:var(--sjf-red);color:#fff;font-size:13px;font-weight:600;
+}
+.sjf-search-tip{
+  font-size:12px;color:var(--sjf-gold);
+}
+.sjf-burger{
+  display:none;background:rgba(255,255,255,.12);border:0;color:#fff;
+  width:40px;height:40px;border-radius:10px;font-size:18px;
+}
+.sjf-search-feedback{
+  background:#fff;border:1px solid var(--sjf-line);border-radius:12px;
+  padding:10px 16px;font-size:13.5px;color:var(--sjf-muted);
+  margin:0 auto;width:min(1200px,92vw);
+  display:none;
+}
+.sjf-search-feedback.sjf-show{display:block;padding:10px 16px 12px;margin-bottom:0}
+
+/* ============ 首屏 ============ */
+.sjf-hero{
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(232,180,100,.22),transparent 60%),
+    radial-gradient(700px 500px at 5% 110%,rgba(224,58,74,.2),transparent 65%),
+    var(--sjf-ink);
+  color:#eef2f8;padding:58px 0 64px;overflow:hidden;
+}
+.sjf-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.sjf-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(232,180,100,.45);color:var(--sjf-gold);
+  font-size:12.5px;letter-spacing:.12em;padding:4px 13px;border-radius:30px;
+  margin-bottom:18px;
+}
+.sjf-badge::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sjf-gold)}
+h1.sjf-title{
+  font-size:clamp(34px,5.2vw,58px);line-height:1.12;margin:0 0 8px;
+  letter-spacing:.01em;font-weight:800;
+}
+.sjf-title-sub{
+  font-size:clamp(15px,1.6vw,19px);color:#a9b8cd;margin:0 0 20px;letter-spacing:.04em;
+}
+.sjf-hero-lead{font-size:14.8px;color:#c3cfdf;max-width:52ch;margin:0 0 26px}
+.sjf-hero-lead b{color:#fff;font-weight:600}
+.sjf-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.sjf-btn{
+  border:0;border-radius:10px;padding:11px 22px;font-size:14.5px;font-weight:600;
+  display:inline-flex;align-items:center;gap:8px;transition:transform .18s,box-shadow .18s,background .18s;
+}
+.sjf-btn:hover{transform:translateY(-2px)}
+.sjf-btn-primary{background:var(--sjf-red);color:#fff;box-shadow:0 8px 22px rgba(224,58,74,.35)}
+.sjf-btn-ghost{background:rgba(255,255,255,.08);color:#e8eef8;border:1px solid rgba(255,255,255,.22)}
+.sjf-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:520px}
+.sjf-stat{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
+  border-radius:12px;padding:12px 14px;
+}
+.sjf-stat b{display:block;font-size:23px;color:#fff;letter-spacing:.01em}
+.sjf-stat span{font-size:12px;color:#9fb0c6;letter-spacing:.05em}
+.sjf-hero-visual{position:relative}
+.sjf-hero-cover{
+  border-radius:18px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.45);
+  border:1px solid rgba(255,255,255,.12);
+}
+.sjf-hero-cover img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.sjf-hero-float{
+  position:absolute;left:-22px;bottom:-26px;
+  background:#fff;color:var(--sjf-ink);border-radius:14px;padding:14px 18px;
+  box-shadow:0 18px 40px rgba(0,0,0,.3);max-width:260px;
+}
+.sjf-hero-float strong{display:block;font-size:13.5px;margin-bottom:2px}
+.sjf-hero-float span{font-size:12px;color:var(--sjf-muted)}
+.sjf-hero-pill{
+  position:absolute;right:-14px;top:-14px;background:var(--sjf-gold);color:#3a2606;
+  font-size:12px;font-weight:700;padding:6px 14px;border-radius:30px;
+  box-shadow:0 8px 20px rgba(232,180,100,.45);
+}
+
+/* ============ 通用 Section ============ */
+.sjf-section{padding:64px 0}
+.sjf-section.sjf-alt{background:#fff;border-top:1px solid var(--sjf-line);border-bottom:1px solid var(--sjf-line)}
+.sjf-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.sjf-sec-head h2{
+  font-size:clamp(23px,2.8vw,32px);margin:0;letter-spacing:.01em;font-weight:800;
+  position:relative;padding-left:16px;
+}
+.sjf-sec-head h2::before{
+  content:"";position:absolute;left:0;top:12%;height:76%;width:5px;border-radius:3px;
+  background:linear-gradient(180deg,var(--sjf-red),var(--sjf-gold));
+}
+.sjf-sec-head p{margin:6px 0 0;color:var(--sjf-muted);font-size:14px;max-width:62ch}
+.sjf-sec-kicker{font-size:12.5px;letter-spacing:.2em;color:var(--sjf-red);font-weight:700;margin-bottom:8px}
+.sjf-link-more{font-size:14px;color:var(--sjf-red);font-weight:600;border-bottom:1px dashed rgba(224,58,74,.5);white-space:nowrap}
+
+/* 深度解析 */
+.sjf-about{display:grid;grid-template-columns:1fr 1fr;gap:46px}
+.sjf-about h2{margin-top:0;font-size:clamp(23px,2.8vw,31px)}
+.sjf-about p{color:#3d4a5e;font-size:15px;margin:0 0 16px}
+.sjf-about p b{color:var(--sjf-ink)}
+.sjf-about-side{background:var(--sjf-card);border:1px solid var(--sjf-line);border-radius:var(--sjf-radius);padding:26px;box-shadow:var(--sjf-shadow);align-self:start}
+.sjf-about-side h3{margin:0 0 14px;font-size:17px}
+.sjf-kv{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--sjf-line);font-size:14px}
+.sjf-kv:last-child{border-bottom:0}
+.sjf-kv span{color:var(--sjf-muted)}
+.sjf-kv b{font-weight:600}
+
+/* ============ 焦点视频 ============ */
+.sjf-focus-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:24px}
+.sjf-card{
+  background:var(--sjf-card);border:1px solid var(--sjf-line);border-radius:var(--sjf-radius);
+  overflow:hidden;box-shadow:var(--sjf-shadow);transition:transform .22s,box-shadow .22s;
+  display:flex;flex-direction:column;
+}
+.sjf-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(15,27,45,.14)}
+.sjf-cover{position:relative;overflow:hidden;background:#0f1b2d}
+.sjf-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.sjf-card:hover .sjf-cover img{transform:scale(1.05)}
+.sjf-cover-tag{
+  position:absolute;left:10px;top:10px;background:rgba(15,27,45,.78);color:#fff;
+  font-size:11.5px;padding:3px 10px;border-radius:20px;letter-spacing:.05em;backdrop-filter:blur(4px);
+}
+.sjf-cover-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.sjf-cover-play i{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(224,58,74,.9);box-shadow:0 6px 20px rgba(0,0,0,.35);
+  border:2px solid rgba(255,255,255,.6);
+}
+.sjf-cover-play i::after{content:"";border-style:solid;border-width:9px 0 9px 15px;border-color:transparent transparent transparent #fff;margin-left:4px}
+.sjf-cover-dur{
+  position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.65);color:#fff;
+  font-size:11.5px;padding:2px 8px;border-radius:6px;
+}
+.sjf-card-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.sjf-card-body h3{margin:0;font-size:16.5px;line-height:1.45}
+.sjf-card-body p{margin:0;font-size:13.5px;color:var(--sjf-muted);flex:1}
+.sjf-card-meta{display:flex;align-items:center;gap:10px;font-size:12.5px;color:var(--sjf-muted);flex-wrap:wrap}
+.sjf-dot{width:3px;height:3px;border-radius:50%;background:currentColor;opacity:.5}
+.sjf-focus-main .sjf-card-body h3{font-size:21px}
+.sjf-focus-main .sjf-cover img{aspect-ratio:16/8.6}
+.sjf-focus-side{display:grid;grid-template-rows:repeat(2,1fr);gap:24px}
+.sjf-focus-side .sjf-card{flex-direction:row}
+.sjf-focus-side .sjf-cover{flex:0 0 46%}
+.sjf-focus-side .sjf-cover img{height:100%;aspect-ratio:auto}
+.sjf-focus-side .sjf-card-body{padding:14px 16px}
+.sjf-focus-side .sjf-card-body h3{font-size:15px}
+
+/* 操作按钮 */
+.sjf-actions{display:flex;align-items:center;gap:8px;margin-top:4px;padding-top:10px;border-top:1px dashed var(--sjf-line);flex-wrap:wrap}
+.sjf-act{
+  border:1px solid var(--sjf-line);background:#fff;color:var(--sjf-muted);
+  border-radius:20px;padding:4px 12px;font-size:12.5px;transition:all .18s;
+  display:inline-flex;align-items:center;gap:5px;
+}
+.sjf-act:hover{border-color:var(--sjf-red);color:var(--sjf-red)}
+.sjf-act.sjf-on{background:rgba(224,58,74,.08);border-color:var(--sjf-red);color:var(--sjf-red);font-weight:600}
+.sjf-act.sjf-fav.sjf-on{background:rgba(232,180,100,.16);border-color:var(--sjf-gold);color:#9a6d17}
+
+/* ============ 视频流 ============ */
+.sjf-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sjf-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+
+/* 标签筛选 */
+.sjf-filter{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px}
+.sjf-chip{
+  border:1px solid var(--sjf-line);background:#fff;color:#48566c;
+  border-radius:30px;padding:6px 16px;font-size:13.5px;transition:all .18s;
+}
+.sjf-chip:hover{border-color:var(--sjf-red);color:var(--sjf-red)}
+.sjf-chip.sjf-active{background:var(--sjf-ink);color:#fff;border-color:var(--sjf-ink)}
+
+/* ============ 专题 ============ */
+.sjf-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sjf-topic{
+  position:relative;border-radius:var(--sjf-radius);overflow:hidden;color:#fff;
+  min-height:250px;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:22px;box-shadow:var(--sjf-shadow);transition:transform .22s;
+}
+.sjf-topic:hover{transform:translateY(-5px)}
+.sjf-topic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.sjf-topic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,27,45,.1) 20%,rgba(15,27,45,.9));z-index:1}
+.sjf-topic>*{position:relative;z-index:2}
+.sjf-topic-state{
+  align-self:flex-start;background:rgba(232,180,100,.94);color:#3a2606;font-size:11.5px;
+  font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:auto;
+}
+.sjf-topic h3{margin:0 0 6px;font-size:19px}
+.sjf-topic p{margin:0;font-size:13px;color:#cfdae9;line-height:1.6}
+.sjf-topic-meta{font-size:12px;color:var(--sjf-gold);margin-top:10px;letter-spacing:.05em}
+
+/* ============ 创作者 ============ */
+.sjf-creators{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sjf-creator{
+  background:var(--sjf-card);border:1px solid var(--sjf-line);border-radius:var(--sjf-radius);
+  padding:22px;display:flex;gap:16px;box-shadow:var(--sjf-shadow);transition:transform .2s;
+}
+.sjf-creator:hover{transform:translateY(-4px)}
+.sjf-avatar{
+  width:60px;height:60px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  color:#fff;font-size:22px;font-weight:800;letter-spacing:.02em;
+  box-shadow:inset 0 0 0 3px rgba(255,255,255,.28),0 6px 16px rgba(15,27,45,.18);
+}
+.sjf-creator-info{min-width:0}
+.sjf-creator-info h3{margin:0 0 3px;font-size:16.5px}
+.sjf-creator-field{font-size:12.5px;color:var(--sjf-red);font-weight:600;margin-bottom:6px}
+.sjf-creator-info p{margin:0 0 9px;font-size:13px;color:var(--sjf-muted);line-height:1.6}
+.sjf-creator-nums{display:flex;gap:14px;font-size:12px;color:var(--sjf-muted);flex-wrap:wrap}
+.sjf-creator-nums b{color:var(--sjf-ink);font-size:13px}
+
+/* ============ 文章/随笔 ============ */
+.sjf-notes{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.sjf-note{
+  background:#fff;border:1px solid var(--sjf-line);border-left:4px solid var(--sjf-gold);
+  border-radius:12px;padding:22px 24px;
+}
+.sjf-note h3{margin:0 0 8px;font-size:17px}
+.sjf-note p{margin:0 0 12px;font-size:14px;color:#465468;line-height:1.8}
+.sjf-note-meta{font-size:12px;color:var(--sjf-muted);letter-spacing:.04em}
+
+/* ============ 评价 ============ */
+.sjf-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sjf-review{
+  background:#fff;border:1px solid var(--sjf-line);border-radius:var(--sjf-radius);
+  padding:22px;box-shadow:0 6px 18px rgba(15,27,45,.05);position:relative;
+}
+.sjf-review::before{
+  content:"“";position:absolute;right:18px;top:2px;font-size:52px;color:rgba(224,58,74,.13);
+  font-family:Georgia,serif;line-height:1;
+}
+.sjf-review p{margin:0 0 14px;font-size:14px;color:#3d4a5e;line-height:1.8}
+.sjf-review-who{display:flex;align-items:center;gap:10px}
+.sjf-review-who .sjf-avatar{width:36px;height:36px;font-size:14px;box-shadow:none}
+.sjf-review-who strong{display:block;font-size:13.5px}
+.sjf-review-who span{font-size:11.5px;color:var(--sjf-muted)}
+
+/* ============ 排行 ============ */
+.sjf-rank{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.sjf-rank-col h3{font-size:17px;margin:0 0 14px;display:flex;align-items:center;gap:8px}
+.sjf-rank-col h3::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--sjf-red)}
+.sjf-rank-item{
+  display:flex;align-items:center;gap:14px;padding:11px 0;border-bottom:1px dashed var(--sjf-line);
+}
+.sjf-rank-item:last-child{border-bottom:0}
+.sjf-rank-no{
+  width:26px;height:26px;flex:0 0 auto;border-radius:8px;display:grid;place-items:center;
+  font-size:12.5px;font-weight:700;background:var(--sjf-paper);color:var(--sjf-muted);
+}
+.sjf-rank-item:nth-child(2) .sjf-rank-no{background:var(--sjf-red);color:#fff}
+.sjf-rank-item:nth-child(3) .sjf-rank-no{background:var(--sjf-red-deep);color:#fff}
+.sjf-rank-main{flex:1;min-width:0}
+.sjf-rank-main strong{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sjf-rank-main span{font-size:12px;color:var(--sjf-muted)}
+.sjf-rank-hot{font-size:12.5px;color:var(--sjf-red);font-weight:700;white-space:nowrap}
+
+/* ============ 灵感/数据 ============ */
+.sjf-idea{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.sjf-idea-card{
+  background:var(--sjf-ink-2);color:#e7eef8;border-radius:var(--sjf-radius);padding:24px;
+  position:relative;overflow:hidden;
+}
+.sjf-idea-card::after{
+  content:"";position:absolute;right:-30px;bottom:-30px;width:110px;height:110px;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,180,100,.28),transparent 70%);
+}
+.sjf-idea-card h3{margin:0 0 8px;font-size:16px;color:var(--sjf-gold)}
+.sjf-idea-card p{margin:0;font-size:13.5px;color:#b3c1d6;line-height:1.7}
+
+/* ============ 动态 ============ */
+.sjf-news{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.sjf-news-item{
+  display:flex;gap:16px;background:#fff;border:1px solid var(--sjf-line);
+  border-radius:12px;padding:18px;transition:box-shadow .2s;
+}
+.sjf-news-item:hover{box-shadow:var(--sjf-shadow)}
+.sjf-news-date{
+  flex:0 0 auto;width:62px;text-align:center;background:var(--sjf-paper);
+  border-radius:10px;padding:8px 0;align-self:flex-start;
+}
+.sjf-news-date b{display:block;font-size:19px;color:var(--sjf-red);line-height:1.2}
+.sjf-news-date span{font-size:11px;color:var(--sjf-muted)}
+.sjf-news-item h3{margin:0 0 5px;font-size:15px}
+.sjf-news-item p{margin:0;font-size:13px;color:var(--sjf-muted);line-height:1.65}
+
+/* ============ 合作 ============ */
+.sjf-partners{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.sjf-partner{
+  background:#fff;border:1px solid var(--sjf-line);border-radius:12px;
+  padding:14px 26px;font-size:14px;font-weight:600;color:#4a586e;letter-spacing:.04em;
+  transition:all .2s;
+}
+.sjf-partner:hover{border-color:var(--sjf-red);color:var(--sjf-red);transform:translateY(-3px)}
+
+/* ============ FAQ ============ */
+.sjf-faq{max-width:900px;margin:0 auto}
+.sjf-faq details{
+  background:#fff;border:1px solid var(--sjf-line);border-radius:12px;
+  padding:0 20px;margin-bottom:12px;transition:border-color .18s;
+}
+.sjf-faq details[open]{border-color:rgba(224,58,74,.5)}
+.sjf-faq summary{
+  list-style:none;cursor:pointer;padding:16px 0;font-size:15px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+}
+.sjf-faq summary::-webkit-details-marker{display:none}
+.sjf-faq summary::after{
+  content:"+";font-size:20px;color:var(--sjf-red);font-weight:400;transition:transform .2s;
+}
+.sjf-faq details[open] summary::after{content:"−"}
+.sjf-faq details p{margin:0 0 18px;font-size:14px;color:#465468;line-height:1.8}
+
+/* ============ 投稿/联系 ============ */
+.sjf-join{
+  background:linear-gradient(135deg,#0f1b2d,#1c3050 70%,#26405f);
+  color:#eef2f8;border-radius:18px;padding:44px;display:grid;
+  grid-template-columns:1.2fr .8fr;gap:36px;align-items:center;
+  box-shadow:0 24px 60px rgba(15,27,45,.28);
+}
+.sjf-join h2{margin:0 0 12px;font-size:clamp(22px,2.6vw,29px)}
+.sjf-join p{margin:0 0 20px;font-size:14.5px;color:#bccbde}
+.sjf-join-form{display:flex;gap:10px;flex-wrap:wrap}
+.sjf-join-form input{
+  flex:1 1 200px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);
+  color:#fff;border-radius:10px;padding:12px 16px;font-size:14px;outline:0;
+}
+.sjf-join-form input::placeholder{color:#8fa2ba}
+.sjf-join-form input:focus{border-color:var(--sjf-gold)}
+.sjf-join-side{display:grid;gap:12px}
+.sjf-join-contact{display:flex;align-items:center;gap:10px;font-size:13.5px;color:#c9d6e6}
+.sjf-join-contact b{color:#fff;font-weight:600}
+
+/* ============ 页脚 ============ */
+.sjf-footer{background:#0b1523;color:#8ea0bb;padding:52px 0 26px;font-size:13.5px}
+.sjf-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
+.sjf-footer h3{color:#fff;font-size:14.5px;margin:0 0 14px;letter-spacing:.05em}
+.sjf-footer p{margin:0 0 10px;line-height:1.8}
+.sjf-footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.sjf-footer ul a:hover{color:#fff}
+.sjf-footer-brand .sjf-logo-text strong{color:#fff}
+.sjf-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.09);padding-top:20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#6c7f99;
+}
+
+/* Toast & 回到顶部 */
+.sjf-toast{
+  position:fixed;left:50%;bottom:38px;transform:translate(-50%,26px);
+  background:rgba(15,27,45,.94);color:#fff;padding:11px 22px;border-radius:10px;
+  font-size:13.5px;opacity:0;pointer-events:none;transition:all .28s;z-index:200;
+  box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+.sjf-toast.sjf-show{opacity:1;transform:translate(-50%,0)}
+.sjf-top{
+  position:fixed;right:24px;bottom:28px;width:46px;height:46px;border-radius:50%;
+  border:0;background:var(--sjf-red);color:#fff;font-size:18px;display:grid;place-items:center;
+  box-shadow:0 10px 24px rgba(224,58,74,.4);opacity:0;pointer-events:none;transition:all .25s;z-index:150;
+}
+.sjf-top.sjf-show{opacity:1;pointer-events:auto}
+
+/* 弹窗 */
+.sjf-modal{
+  position:fixed;inset:0;background:rgba(9,17,29,.62);z-index:180;
+  display:none;place-items:center;padding:20px;backdrop-filter:blur(3px);
+}
+.sjf-modal.sjf-show{display:grid}
+.sjf-modal-box{
+  background:#fff;border-radius:16px;padding:28px;width:min(520px,100%);
+  max-height:86vh;overflow:auto;box-shadow:0 30px 70px rgba(0,0,0,.35);
+}
+.sjf-modal-box h3{margin:0 0 6px;font-size:19px}
+.sjf-modal-box .sjf-modal-sub{font-size:13px;color:var(--sjf-muted);margin:0 0 18px}
+.sjf-modal-box label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+.sjf-modal-box input,.sjf-modal-box textarea,.sjf-modal-box select{
+  width:100%;border:1px solid var(--sjf-line);border-radius:9px;padding:10px 13px;
+  font-size:14px;font-family:inherit;margin-bottom:14px;outline:0;background:#fbfcfd;
+}
+.sjf-modal-box input:focus,.sjf-modal-box textarea:focus,.sjf-modal-box select:focus{border-color:var(--sjf-red);background:#fff}
+.sjf-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
+.sjf-modal-close{
+  float:right;border:0;background:var(--sjf-paper);width:32px;height:32px;border-radius:50%;
+  font-size:16px;color:var(--sjf-muted);
+}
+.sjf-share-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px}
+.sjf-share-list button{
+  border:1px solid var(--sjf-line);background:#fff;border-radius:10px;padding:11px;
+  font-size:14px;font-weight:600;color:#3d4a5e;transition:all .18s;
+}
+.sjf-share-list button:hover{border-color:var(--sjf-red);color:var(--sjf-red);background:rgba(224,58,74,.05)}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .sjf-hero-grid,.sjf-about,.sjf-focus-grid,.sjf-rank,.sjf-join{grid-template-columns:1fr}
+  .sjf-grid-3,.sjf-topics,.sjf-creators,.sjf-reviews,.sjf-idea{grid-template-columns:repeat(2,1fr)}
+  .sjf-grid-4{grid-template-columns:repeat(2,1fr)}
+  .sjf-notes,.sjf-news{grid-template-columns:1fr}
+  .sjf-footer-grid{grid-template-columns:1fr 1fr}
+  .sjf-hero-float{left:auto;right:8px;bottom:-18px}
+  .sjf-hero-pill{right:8px}
+}
+@media (max-width:760px){
+  .sjf-menu{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:var(--sjf-ink-2);flex-direction:column;padding:10px 16px 18px;
+    border-bottom:1px solid rgba(255,255,255,.1);gap:2px;
+  }
+  .sjf-menu.sjf-open{display:flex}
+  .sjf-burger{display:grid;place-items:center}
+  .sjf-search input{width:96px}
+  .sjf-header{position:relative}
+  .sjf-sticky{position:static}
+  .sjf-anchor{scroll-margin-top:12px}
+  .sjf-hero{padding:36px 0 52px}
+  .sjf-section{padding:44px 0}
+  .sjf-grid-3,.sjf-topics,.sjf-creators,.sjf-reviews,.sjf-idea,.sjf-grid-4{grid-template-columns:1fr}
+  .sjf-focus-side .sjf-card{flex-direction:column}
+  .sjf-focus-side .sjf-cover{flex:auto}
+  .sjf-focus-side .sjf-cover img{height:auto;aspect-ratio:16/9}
+  .sjf-join{padding:28px}
+  .sjf-footer-grid{grid-template-columns:1fr}
+  .sjf-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sjf-sticky">
+  <div class="sjf-notice">
+    <div class="sjf-wrap">
+      <span class="sjf-notice-tag">官方发布</span>
+      <div class="sjf-notice-list">
+        <span class="sjf-notice-item"><b>11·18</b> 冬季日影策展「雪与暖炉」专题页上线</span>
+        <span class="sjf-notice-item"><b>11·20</b> 第十二期创作者招募报名开启</span>
+        <span class="sjf-notice-item"><b>11·25</b> 导演对谈实录《长镜头里的家庭》更新</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sjf-header">
+    <div class="sjf-wrap">
+      <nav class="sjf-nav" aria-label="主导航">
+        <a class="sjf-logo" href="#sjf-top" aria-label="新浪日本电影网首页">
+          <span class="sjf-logo-mark">日</span>
+          <span class="sjf-logo-text"><strong>新浪日本电影网</strong><span>SINA JAPAN FILM</span></span>
+        </a>
+        <div class="sjf-menu" id="sjfMenu">
+          <a href="#sjf-top">首页</a>
+          <a href="#sjf-focus">视频焦点</a>
+          <a href="#sjf-topics">专题企划</a>
+          <a href="#sjf-creators">创作者</a>
+          <a href="#sjf-notes">品牌故事</a>
+          <a href="#sjf-news">企业动态</a>
+          <a href="#sjf-faq">帮助</a>
+          <a href="#sjf-join">联系</a>
+        </div>
+        <div class="sjf-nav-tools">
+          <div class="sjf-search">
+            <input type="search" id="sjfSearchInput" placeholder="搜索影片、导演、影评" aria-label="站内搜索">
+            <button type="button" id="sjfSearchBtn">搜索</button>
+          </div>
+          <button class="sjf-burger" id="sjfBurger" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="sjf-search-feedback" id="sjfSearchFeedback" role="status" aria-live="polite"></div>
+</div>
+
+<main id="sjf-top">
+
+  <!-- ============ 首屏 ============ -->
+  <section class="sjf-hero">
+    <div class="sjf-wrap sjf-hero-grid">
+      <div>
+        <span class="sjf-badge">官方网站 · 品牌影像门户</span>
+        <h1 class="sjf-title">新浪日本电影网</h1>
+        <p class="sjf-title-sub">以策展之心，把日影的日常与远方带到你面前</p>
+        <p class="sjf-hero-lead">
+          作为深耕日本电影垂直领域的<b>品牌平台</b>，新浪日本电影网以原创正版高清内容为核心，
+          凝聚导演、影评人、影迷与内容创作者，构建从片单策展、深度访谈到影像共创的
+          <b>内容生态</b>。我们希望每一部被认真对待的日本电影，都能在这里遇见懂它的人。
+        </p>
+        <div class="sjf-hero-actions">
+          <a class="sjf-btn sjf-btn-primary" href="#sjf-focus">进入视频焦点</a>
+          <a class="sjf-btn sjf-btn-ghost" href="#sjf-join">创作者投稿</a>
+          <button class="sjf-btn sjf-btn-ghost" type="button" data-sjf-share="新浪日本电影网官方网站">分享官网</button>
+        </div>
+        <div class="sjf-stats">
+          <div class="sjf-stat"><b>12,800+</b><span>策展片单与影像条目</span></div>
+          <div class="sjf-stat"><b>340 位</b><span>签约与入驻创作者</span></div>
+          <div class="sjf-stat"><b>9 年</b><span>持续运营与内容沉淀</span></div>
+        </div>
+      </div>
+      <div class="sjf-hero-visual">
+        <span class="sjf-hero-pill">本周主推</span>
+        <div class="sjf-hero-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='s1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2314263f'/%3E%3Cstop offset='1' stop-color='%233b5a7a'/%3E%3C/linearGradient%3E%3ClinearGradient id='s2' x1='0' y1='1' x2='0' y2='0'%3E%3Cstop offset='0' stop-color='%23e8b464' stop-opacity='.85'/%3E%3Cstop offset='1' stop-color='%23e03a4a' stop-opacity='.25'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23s1)'/%3E%3Ccircle cx='610' cy='130' r='72' fill='%23f3d9a4' opacity='.55'/%3E%3Cpath d='M0 380 L150 300 L280 350 L420 260 L560 340 L700 280 L800 330 L800 500 L0 500 Z' fill='%230d1b2c' opacity='.75'/%3E%3Cpath d='M0 430 L120 390 L260 430 L400 370 L540 420 L690 380 L800 415 L800 500 L0 500 Z' fill='url(%23s2)'/%3E%3Cg stroke='%23ffffff' stroke-opacity='.35' stroke-width='2'%3E%3Cline x1='90' y1='95' x2='90' y2='215'/%3E%3Cline x1='90' y1='95' x2='150' y2='120'/%3E%3Cline x1='90' y1='140' x2='135' y2='160'/%3E%3C/g%3E%3Crect x='330' y='180' width='140' height='90' rx='4' fill='none' stroke='%23ffffff' stroke-opacity='.3' stroke-width='2'/%3E%3C/svg%3E" alt="新浪日本电影网本周主推专题《雪与暖炉》封面主视觉">
+        </div>
+        <div class="sjf-hero-float">
+          <strong>《雪与暖炉》冬季策展</strong>
+          <span>6 部家庭题材影片 · 4 篇导演对谈 · 已上线</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 深度解析 ============ -->
+  <section class="sjf-section sjf-alt sjf-anchor" id="sjf-about">
+    <div class="sjf-wrap">
+      <div class="sjf-about">
+        <div>
+          <p class="sjf-sec-kicker">ABOUT THE BRAND</p>
+          <h2>关于新浪日本电影网：一个认真对待日影的内容社区</h2>
+          <p>
+            新浪日本电影网创立于 2016 年，是国内较早专注日本电影领域的垂直内容平台。
+            九年间，我们从一份小型的影迷片单出发，逐步生长为集片单策展、深度访谈、
+            影像解析、创作者共创于一体的<b>官方网站</b>型品牌社区。我们相信，电影不只是
+            两个小时的观看，它是一种理解他人生活的方式，也是创作者与世界对话的途径。
+          </p>
+          <p>
+            平台内容以<b>原创</b>与<b>正版</b>为底线，所有影像资料均经过授权或由创作者原创发布。
+            我们的编辑团队与 340 位入驻创作者一同，持续输出高清影像、图文解析与幕后记录，
+            覆盖家庭、青春、城市、职场、饮食、自然等题材。每一条内容都经过人工审校，
+            力求把<b>专业</b>的判断交给读者，把选择的自由留给观众。
+          </p>
+          <p>
+            在这里，你会看到分镜被逐帧拆解的拉片笔记，也会读到一位普通影迷写下的观后感；
+            会遇见研究小津安二郎十余年的学者，也会遇见刚拍完第一部短片的年轻创作者。
+            我们坚持以<b>用户至上</b>的原则打磨产品体验，以<b>匠心</b>对待每一条片单的排序与注解，
+            让「找到一部合适的日本电影」这件事变得更轻松、更有温度。
+          </p>
+          <p>
+            作为一家持续运营的品牌企业，我们同样重视社会责任：举办公益放映、支持高校影像社团、
+            为青年创作者提供免费的作品展示位。我们相信，<b>影响力</b>来自长期的<b>陪伴</b>，
+            而<b>真实</b>的表达自有其<b>力量</b>。新浪日本电影网愿做那盏一直亮着的灯，
+            让喜欢日本电影的人，不必独自寻找。
+          </p>
+        </div>
+        <aside class="sjf-about-side">
+          <h3>平台速览</h3>
+          <div class="sjf-kv"><span>成立时间</span><b>2016 年</b></div>
+          <div class="sjf-kv"><span>内容方向</span><b>日本电影 · 影像策展</b></div>
+          <div class="sjf-kv"><span>创作者规模</span><b>340 位入驻</b></div>
+          <div class="sjf-kv"><span>片单条目</span><b>12,800+</b></div>
+          <div class="sjf-kv"><span>策展专题</span><b>96 期</b></div>
+          <div class="sjf-kv"><span>内容准则</span><b>原创 · 正版 · 高清</b></div>
+          <div class="sjf-kv"><span>社区口碑</span><b>用户首选日影社区</b></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 视频焦点 ============ -->
+  <section class="sjf-section sjf-anchor" id="sjf-focus">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">FEATURED</p>
+          <h2>视频焦点：本周值得认真看的六条内容</h2>
+          <p>由编辑部与共创作者共同推荐，涵盖拉片、访谈、纪录与幕后，适合在安静的夜晚逐条看完。</p>
+        </div>
+        <a class="sjf-link-more" href="#sjf-stream">查看全部内容</a>
+      </div>
+
+      <div class="sjf-focus-grid">
+        <article class="sjf-card sjf-focus-main">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 430'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%235d7f9e'/%3E%3Cstop offset='1' stop-color='%23243a52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='430' fill='url(%23f1)'/%3E%3Crect x='120' y='150' width='250' height='160' fill='%23f2e6d0' opacity='.9'/%3E%3Cpath d='M120 150 L245 80 L370 150 Z' fill='%23c9a877'/%3E%3Crect x='200' y='220' width='70' height='90' fill='%235d7f9e'/%3E%3Ccircle cx='560' cy='180' r='46' fill='%23f3d9a4' opacity='.7'/%3E%3Cpath d='M370 310 L470 250 L620 310 L620 430 L370 430 Z' fill='%231a2c40'/%3E%3Cpath d='M0 360 Q200 320 400 360 T800 350 L800 430 L0 430 Z' fill='%23e8b464' opacity='.35'/%3E%3C/svg%3E" alt="拉片实验室：小津安二郎家庭场景中的固定机位解析封面">
+            <span class="sjf-cover-tag">拉片 · 深度</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">24:18</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>拉片实验室：小津安二郎家庭场景中的固定机位</h3>
+            <p>从《东京物语》到《秋刀鱼之味》，一帧一帧拆解低机位镜头如何构造出东方式的克制与亲密。本期邀请到研究日本家庭电影的影评人林砚，用 24 分钟讲清楚「不动的镜头为什么动人」。</p>
+            <div class="sjf-card-meta">
+              <span>林砚 · 特邀影评人</span><span class="sjf-dot"></span><span>1.8 万次播放</span><span class="sjf-dot"></span><span>11 月 16 日</span>
+            </div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">326</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="拉片实验室：小津安二郎家庭场景中的固定机位">分享</button>
+              <button class="sjf-act" type="button" data-sjf-report>反馈</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="sjf-focus-side">
+          <article class="sjf-card">
+            <div class="sjf-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 430'%3E%3Crect width='400' height='430' fill='%23f0e3d3'/%3E%3Ccircle cx='200' cy='160' r='88' fill='%23e03a4a' opacity='.18'/%3E%3Cpath d='M90 430 L90 260 Q200 170 310 260 L310 430 Z' fill='%232f4a66'/%3E%3Crect x='150' y='290' width='100' height='140' fill='%23f2e6d0' opacity='.85'/%3E%3Cpath d='M60 100 Q120 40 200 80' stroke='%23c9a877' stroke-width='6' fill='none'/%3E%3C/svg%3E" alt="导演对谈实录：长镜头里的家庭与距离封面">
+              <span class="sjf-cover-tag">访谈</span>
+              <span class="sjf-cover-play"><i></i></span>
+              <span class="sjf-cover-dur">38:40</span>
+            </div>
+            <div class="sjf-card-body">
+              <h3>导演对谈实录：长镜头里的家庭与距离</h3>
+              <p>独立导演藤井と若手摄影师的一场两小时对谈，剪成 38 分钟。聊到为什么坚持自然光、为什么让演员走完一整条街。</p>
+              <div class="sjf-card-meta"><span>编辑部访谈组</span><span class="sjf-dot"></span><span>9,420 次播放</span></div>
+              <div class="sjf-actions">
+                <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">184</span></button>
+                <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+                <button class="sjf-act" type="button" data-sjf-share="导演对谈实录：长镜头里的家庭与距离">分享</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sjf-card">
+            <div class="sjf-cover">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 430'%3E%3Crect width='400' height='430' fill='%231a2c40'/%3E%3Ccircle cx='320' cy='90' r='50' fill='%23e8b464' opacity='.8'/%3E%3Cpath d='M0 300 L80 240 L160 290 L250 210 L340 280 L400 250 L400 430 L0 430 Z' fill='%233d5a78'/%3E%3Cg stroke='%23f2e6d0' stroke-width='3' opacity='.7'%3E%3Cline x1='70' y1='120' x2='70' y2='220'/%3E%3Cline x1='70' y1='120' x2='130' y2='145'/%3E%3C/g%3E%3Crect x='180' y='330' width='40' height='100' fill='%23f2e6d0' opacity='.5'/%3E%3C/svg%3E" alt="城市影像志：深夜食堂里的东京街区纪录封面">
+              <span class="sjf-cover-tag">纪录</span>
+              <span class="sjf-cover-play"><i></i></span>
+              <span class="sjf-cover-dur">16:05</span>
+            </div>
+            <div class="sjf-card-body">
+              <h3>城市影像志：深夜食堂里的东京街区</h3>
+              <p>跟随一位在新宿经营小食堂二十三年的店主，记录夜晚十一点后的客人、菜单与街道。</p>
+              <div class="sjf-card-meta"><span>创作者 陈屿</span><span class="sjf-dot"></span><span>7,860 次播放</span></div>
+              <div class="sjf-actions">
+                <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">241</span></button>
+                <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+                <button class="sjf-act" type="button" data-sjf-share="城市影像志：深夜食堂里的东京街区">分享</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 热门视频流 ============ -->
+  <section class="sjf-section sjf-alt sjf-anchor" id="sjf-stream">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">COMMUNITY PICKS</p>
+          <h2>热门视频流：社区正在讨论的九条内容</h2>
+          <p>按标签筛选你感兴趣的题材，所有内容均由创作者原创发布，社区共同打磨口碑。</p>
+        </div>
+        <a class="sjf-link-more" href="#sjf-join">我要投稿</a>
+      </div>
+
+      <div class="sjf-filter" id="sjfFilter">
+        <button class="sjf-chip sjf-active" type="button" data-sjf-filter="all">全部</button>
+        <button class="sjf-chip" type="button" data-sjf-filter="拉片">拉片</button>
+        <button class="sjf-chip" type="button" data-sjf-filter="访谈">访谈</button>
+        <button class="sjf-chip" type="button" data-sjf-filter="纪录">纪录</button>
+        <button class="sjf-chip" type="button" data-sjf-filter="教程">教程</button>
+        <button class="sjf-chip" type="button" data-sjf-filter="幕后">幕后</button>
+      </div>
+
+      <div class="sjf-grid-3" id="sjfStreamGrid">
+
+        <article class="sjf-card" data-sjf-tag="拉片">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232b3e54'/%3E%3Cg stroke='%23f2e6d0' stroke-opacity='.55' stroke-width='2'%3E%3Cpath d='M60 60 L200 60 L200 200 L60 200 Z' fill='none'/%3E%3Cpath d='M260 100 L400 100 L400 220 L260 220 Z' fill='none'/%3E%3C/g%3E%3Ccircle cx='130' cy='130' r='30' fill='%23e03a4a' opacity='.5'/%3E%3Ccircle cx='330' cy='160' r='30' fill='%23e8b464' opacity='.5'/%3E%3C/svg%3E" alt="四组镜头讲完一场告别：日影中的留白技巧封面">
+            <span class="sjf-cover-tag">拉片</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">12:36</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>四组镜头讲完一场告别：日影中的留白技巧</h3>
+            <p>不靠台词推进情绪，日影常用空镜与停顿完成叙事。本期拆解四部代表作片段的留白处理。</p>
+            <div class="sjf-card-meta"><span>创作者 苏回</span><span class="sjf-dot"></span><span>6,210 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">142</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="四组镜头讲完一场告别：日影中的留白技巧">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="sjf-card" data-sjf-tag="访谈">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f0e3d3'/%3E%3Crect x='0' y='180' width='480' height='90' fill='%23c9a877' opacity='.5'/%3E%3Ccircle cx='160' cy='120' r='52' fill='%233d5a78'/%3E%3Ccircle cx='160' cy='120' r='30' fill='%23f0e3d3'/%3E%3Ccircle cx='330' cy='130' r='44' fill='%23e03a4a' opacity='.65'/%3E%3Crect x='300' y='80' width='70' height='70' rx='6' fill='%23f0e3d3' opacity='.8'/%3E%3C/svg%3E" alt="与摄影师聊自然光：一场关于清晨五点的访谈封面">
+            <span class="sjf-cover-tag">访谈</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">28:12</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>与摄影师聊自然光：一场关于清晨五点的访谈</h3>
+            <p>拍摄日影的摄影师如何等工作里那束光？从日出前的测光到反光板的角度，聊透自然光拍摄。</p>
+            <div class="sjf-card-meta"><span>编辑部访谈组</span><span class="sjf-dot"></span><span>5,480 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">98</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="与摄影师聊自然光：一场关于清晨五点的访谈">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="sjf-card" data-sjf-tag="纪录">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231e3348'/%3E%3Cpath d='M0 200 Q120 160 240 200 T480 190 L480 270 L0 270 Z' fill='%233f607f'/%3E%3Ccircle cx='390' cy='70' r='34' fill='%23f3d9a4' opacity='.85'/%3E%3Cg fill='%23f2e6d0' opacity='.8'%3E%3Crect x='90' y='150' width='26' height='60'/%3E%3Crect x='130' y='130' width='26' height='80'/%3E%3Crect x='170' y='160' width='26' height='50'/%3E%3C/g%3E%3C/svg%3E" alt="沿着海岸线拍一座小镇：濑户内的三天纪录封面">
+            <span class="sjf-cover-tag">纪录</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">21:47</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>沿着海岸线拍一座小镇：濑户内的三天</h3>
+            <p>带上两台相机和一份手绘地图，在濑户内海的小镇住了三天，记录潮汐、渡船与老人。</p>
+            <div class="sjf-card-meta"><span>创作者 陈屿</span><span class="sjf-dot"></span><span>7,120 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">203</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="沿着海岸线拍一座小镇：濑户内的三天">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="sjf-card" data-sjf-tag="教程">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f5f6f8'/%3E%3Crect x='50' y='50' width='380' height='170' rx='8' fill='%23ffffff' stroke='%23c9d2de' stroke-width='2'/%3E%3Crect x='70' y='70' width='150' height='12' rx='6' fill='%23e03a4a' opacity='.6'/%3E%3Crect x='70' y='96' width='280' height='8' rx='4' fill='%23c9d2de'/%3E%3Crect x='70' y='114' width='230' height='8' rx='4' fill='%23c9d2de'/%3E%3Crect x='70' y='132' width='260' height='8' rx='4' fill='%23c9d2de'/%3E%3Crect x='70' y='162' width='90' height='28' rx='6' fill='%233d5a78'/%3E%3C/svg%3E" alt="从脚本到成片：五分钟短片的剪辑节奏教程封面">
+            <span class="sjf-cover-tag">教程</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">18:22</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>从脚本到成片：五分钟短片的剪辑节奏</h3>
+            <p>给刚入门的创作者：如何用镜头长度控制情绪、怎样安排转场才不显得生硬，全程实操演示。</p>
+            <div class="sjf-card-meta"><span>创作者 何岸</span><span class="sjf-dot"></span><span>8,930 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">311</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="从脚本到成片：五分钟短片的剪辑节奏">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="sjf-card" data-sjf-tag="幕后">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%232a2035'/%3E%3Crect x='0' y='190' width='480' height='80' fill='%233d2c4d'/%3E%3Cg fill='%23e8b464' opacity='.9'%3E%3Ccircle cx='90' cy='80' r='14'/%3E%3Ccircle cx='150' cy='60' r='10'/%3E%3Ccircle cx='210' cy='92' r='12'/%3E%3C/g%3E%3Cpath d='M280 190 L330 120 L380 190 Z' fill='%23e03a4a' opacity='.7'/%3E%3Crect x='60' y='230' width='120' height='10' rx='5' fill='%23f2e6d0' opacity='.4'/%3E%3C/svg%3E" alt="片场的一天：一个小剧组的器材与分工幕后封面">
+            <span class="sjf-cover-tag">幕后</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">14:58</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>片场的一天：一个小剧组的器材与分工</h3>
+            <p>八个人、两台机器、三天拍摄。完整记录一个学生剧组的筹备、通告与现场调度。</p>
+            <div class="sjf-card-meta"><span>创作者 何岸</span><span class="sjf-dot"></span><span>4,660 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">87</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="片场的一天：一个小剧组的器材与分工">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="sjf-card" data-sjf-tag="拉片">
+          <div class="sjf-cover">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23314a63'/%3E%3Cg stroke='%23f2e6d0' stroke-width='2' stroke-opacity='.5' fill='none'%3E%3Crect x='40' y='40' width='120' height='70'/%3E%3Crect x='180' y='40' width='120' height='70'/%3E%3Crect x='320' y='40' width='120' height='70'/%3E%3Crect x='40' y='140' width='120' height='70'/%3E%3Crect x='180' y='140' width='120' height='70'/%3E%3Crect x='320' y='140' width='120' height='70'/%3E%3C/g%3E%3Crect x='320' y='140' width='120' height='70' fill='%23e03a4a' opacity='.4'/%3E%3C/svg%3E" alt="色彩如何说话：日影中的季节配色法则封面">
+            <span class="sjf-cover-tag">拉片</span>
+            <span class="sjf-cover-play"><i></i></span>
+            <span class="sjf-cover-dur">09:44</span>
+          </div>
+          <div class="sjf-card-body">
+            <h3>色彩如何说话：日影中的季节配色法则</h3>
+            <p>春樱的粉、夏海的蓝、秋叶的橙与冬雪的灰白，六部影片示范季节如何被当成情绪使用。</p>
+            <div class="sjf-card-meta"><span>创作者 苏回</span><span class="sjf-dot"></span><span>5,340 次播放</span></div>
+            <div class="sjf-actions">
+              <button class="sjf-act" type="button" data-sjf-like>赞 <span class="sjf-num">165</span></button>
+              <button class="sjf-act sjf-fav" type="button" data-sjf-fav>收藏</button>
+              <button class="sjf-act" type="button" data-sjf-share="色彩如何说话：日影中的季节配色法则">分享</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 专题企划 ============ -->
+  <section class="sjf-section sjf-anchor" id="sjf-topics">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">CURATED SERIES</p>
+          <h2>专题企划：四条正在更新的策展线</h2>
+          <p>每一期专题由编辑与创作者联合策划，从片单延伸到访谈、文章与线下放映，持续更新。</p>
+        </div>
+      </div>
+      <div class="sjf-topics">
+        <a class="sjf-topic" href="#sjf-focus">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%23223b54'/%3E%3Ccircle cx='360' cy='120' r='60' fill='%23f3d9a4' opacity='.7'/%3E%3Cpath d='M0 320 L120 250 L230 300 L340 230 L440 290 L500 260 L500 500 L0 500 Z' fill='%23e8b464' opacity='.5'/%3E%3Cpath d='M0 400 L140 340 L260 390 L380 330 L500 380 L500 500 L0 500 Z' fill='%230f1b2d' opacity='.6'/%3E%3Cg fill='%23ffffff' opacity='.7'%3E%3Ccircle cx='120' cy='90' r='3'/%3E%3Ccircle cx='200' cy='60' r='2'/%3E%3Ccircle cx='270' cy='110' r='3'/%3E%3C/g%3E%3C/svg%3E" alt="冬季策展《雪与暖炉》专题封面">
+          <span class="sjf-topic-state">更新中 · 第 3 期</span>
+          <h3>雪与暖炉</h3>
+          <p>六部关于家庭与冬天的日本电影，配合导演对谈与四篇影评，讨论寒冷季节里人和人如何靠近。</p>
+          <span class="sjf-topic-meta">6 部影片 · 4 篇访谈 · 11 月上线</span>
+        </a>
+        <a class="sjf-topic" href="#sjf-stream">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%233a2d4a'/%3E%3Cg fill='%23e03a4a' opacity='.8'%3E%3Crect x='60' y='300' width='40' height='160'/%3E%3Crect x='130' y='240' width='40' height='220'/%3E%3Crect x='200' y='280' width='40' height='180'/%3E%3C/g%3E%3Ccircle cx='370' cy='150' r='80' fill='%23e8b464' opacity='.55'/%3E%3Cpath d='M0 460 L500 460 L500 500 L0 500 Z' fill='%23f2e6d0' opacity='.25'/%3E%3C/svg%3E" alt="城市影像计划《街角十二时辰》专题封面">
+          <span class="sjf-topic-state">征集中 · 报名中</span>
+          <h3>街角十二时辰</h3>
+          <p>面向全站创作者的影像征集：用十二个时辰记录你所在城市的街角，入选作品将进入官方策展。</p>
+          <span class="sjf-topic-meta">开放投稿 · 12 月 10 日截止</span>
+        </a>
+        <a class="sjf-topic" href="#sjf-creators">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%231d3247'/%3E%3Cg stroke='%23e8b464' stroke-width='3' fill='none' opacity='.85'%3E%3Ccircle cx='250' cy='250' r='120'/%3E%3Ccircle cx='250' cy='250' r='70'/%3E%3Cline x1='250' y1='80' x2='250' y2='130'/%3E%3Cline x1='250' y1='370' x2='250' y2='420'/%3E%3Cline x1='80' y1='250' x2='130' y2='250'/%3E%3Cline x1='370' y1='250' x2='420' y2='250'/%3E%3C/g%3E%3Ccircle cx='250' cy='250' r='18' fill='%23e03a4a'/%3E%3C/svg%3E" alt="新人创作者扶持企划《第一部长片》专题封面">
+          <span class="sjf-topic-state">已完成 · 第 2 季</span>
+          <h3>第一部长片</h3>
+          <p>记录六位青年创作者从立项到首映的全过程，包含预算表、分镜稿与失败经验，全部公开。</p>
+          <span class="sjf-topic-meta">6 位创作者 · 18 条影像 · 口碑推荐</span>
+        </a>
+        <a class="sjf-topic" href="#sjf-notes">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' fill='%23f0e3d3'/%3E%3Crect x='70' y='90' width='360' height='320' rx='8' fill='%23ffffff' opacity='.9'/%3E%3Cg stroke='%233d5a78' stroke-width='3' opacity='.55'%3E%3Cline x1='110' y1='160' x2='390' y2='160'/%3E%3Cline x1='110' y1='200' x2='390' y2='200'/%3E%3Cline x1='110' y1='240' x2='320' y2='240'/%3E%3Cline x1='110' y1='280' x2='360' y2='280'/%3E%3C/g%3E%3Ccircle cx='390' cy='350' r='40' fill='%23e03a4a' opacity='.7'/%3E%3C/svg%3E" alt="影评人共读计划《重看一次》专题封面">
+          <span class="sjf-topic-state">长期更新</span>
+          <h3>重看一次</h3>
+          <p>邀请影评人与创作者重看一部旧片，写下十年后新的理解，让经典在讨论中保持温度。</p>
+          <span class="sjf-topic-meta">每月 2 期 · 已更新 24 期</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 创作者矩阵 ============ -->
+  <section class="sjf-section sjf-alt sjf-anchor" id="sjf-creators">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">CREATORS</p>
+          <h2>创作者矩阵：把日影讲清楚的人</h2>
+          <p>他们来自影评、摄影、剪辑、翻译等不同领域，共同构成新浪日本电影网的内容生态。</p>
+        </div>
+        <button class="sjf-link-more" type="button" data-sjf-share="新浪日本电影网创作者矩阵">推荐给影迷</button>
+      </div>
+      <div class="sjf-creators">
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#e03a4a,#8e2536)">林</div>
+          <div class="sjf-creator-info">
+            <h3>林砚</h3>
+            <div class="sjf-creator-field">影评人 · 拉片方向</div>
+            <p>研究日本家庭电影十二年，擅长用分镜与调度讲清导演的意图，拉片系列累计播放超百万。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>86</b></span><span>关注 <b>4.2 万</b></span></div>
+          </div>
+        </article>
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#3d5a78,#22374d)">陈</div>
+          <div class="sjf-creator-info">
+            <h3>陈屿</h3>
+            <div class="sjf-creator-field">纪录片导演 · 城市影像</div>
+            <p>常驻东京与上海两地，专注城市街区的日常记录，作品以长时间跟拍和自然光见长。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>52</b></span><span>关注 <b>3.1 万</b></span></div>
+          </div>
+        </article>
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#c99a55,#8a6329)">苏</div>
+          <div class="sjf-creator-info">
+            <h3>苏回</h3>
+            <div class="sjf-creator-field">剪辑师 · 影像解析</div>
+            <p>做剪辑也做拆解，关注节奏与留白，教程类内容被多所高校影像社团收藏为学习资料。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>64</b></span><span>关注 <b>2.8 万</b></span></div>
+          </div>
+        </article>
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#5d7f9e,#2c4359)">何</div>
+          <div class="sjf-creator-info">
+            <h3>何岸</h3>
+            <div class="sjf-creator-field">导演 · 短片创作</div>
+            <p>短片《潮汐之后》入围多个青年影展，长期在平台分享剧组筹备与拍摄现场的真实记录。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>41</b></span><span>关注 <b>2.2 万</b></span></div>
+          </div>
+        </article>
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#7a4f7e,#43294a)">周</div>
+          <div class="sjf-creator-info">
+            <h3>周遥</h3>
+            <div class="sjf-creator-field">译者 · 字幕与文本</div>
+            <p>从事日文字幕翻译与剧本校订，擅长把台词里的语气与留白，准确地交给中文观众。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>37</b></span><span>关注 <b>1.6 万</b></span></div>
+          </div>
+        </article>
+        <article class="sjf-creator">
+          <div class="sjf-avatar" style="background:linear-gradient(135deg,#2f7a6b,#1a473e)">许</div>
+          <div class="sjf-creator-info">
+            <h3>许葵</h3>
+            <div class="sjf-creator-field">摄影师 · 自然光线</div>
+            <p>以胶片与自然光拍摄为主，喜欢在清晨与黄昏工作，作品常出现在平台的季节主题策展中。</p>
+            <div class="sjf-creator-nums"><span>作品 <b>70</b></span><span>关注 <b>3.5 万</b></span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 故事随笔 + 评价 ============ -->
+  <section class="sjf-section sjf-anchor" id="sjf-notes">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">STORIES</p>
+          <h2>品牌故事与影迷随笔</h2>
+          <p>影像之外，文字记录下人与电影之间真实的相遇。这些故事来自编辑部，也来自社区。</p>
+        </div>
+      </div>
+      <div class="sjf-notes">
+        <article class="sjf-note">
+          <h3>为什么我们坚持做一件事：好好排一份片单</h3>
+          <p>
+            2016 年的冬天，编辑部只有三个人，挤在一间朝北的办公室里，把喜欢的日本电影一部部写进表格。
+            那时我们不知道这份表格会变成什么，只知道顺序很重要：一部片子放在另一部旁边，会改变观看的心情。
+            九年过去，片单从三十部变成一万两千多条，但排序时的那点执念没变——我们始终相信，认真是会被观众感受到的。
+          </p>
+          <div class="sjf-note-meta">编辑部 · 品牌故事 · 2026 年 11 月</div>
+        </article>
+        <article class="sjf-note">
+          <h3>一位影迷的来信：在异乡的深夜里看懂了《东京物语》</h3>
+          <p>
+            读者「阿禾」写来一封长信。她说二十三岁第一次看《东京物语》只觉得节奏慢，二十七岁独自在异国重看时，
+            却在父亲削苹果的那场戏里哭了出来。我们把她的信做成了一期访谈，也和几位创作者聊了聊：
+            为什么有些电影必须等到某个年纪，才真正看得进去。
+          </p>
+          <div class="sjf-note-meta">社区来信 · 影迷故事 · 阅读 2.4 万</div>
+        </article>
+      </div>
+
+      <div style="height:38px"></div>
+
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">VOICES</p>
+          <h2>用户评价：来自社区的真实声音</h2>
+        </div>
+      </div>
+      <div class="sjf-reviews">
+        <article class="sjf-review">
+          <p>片单排序做得很细，同一个导演不同时期的作品会标注适合什么心情看。对我来说，这比任何算法推荐都可靠。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#3d5a78,#22374d)">程</span><span><strong>程一</strong><span>影迷 · 加入 3 年</span></span></div>
+        </article>
+        <article class="sjf-review">
+          <p>拉片内容是我每周期待的部分，讲解很克制，不炫技，也不替观众下结论。作为一个影像专业的学生，我几乎把相关视频都看完了。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#e03a4a,#8e2536)">小</span><span><strong>小花</strong><span>影像专业学生</span></span></div>
+        </article>
+        <article class="sjf-review">
+          <p>投稿流程比想象中顺畅，编辑会认真给修改建议。我的第一条纪录短片在平台发布后，收到了三十多条很长的评论，让我很意外。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#c99a55,#8a6329)">K</span><span><strong>Kaito</strong><span>创作者 · 纪录方向</span></span></div>
+        </article>
+        <article class="sjf-review">
+          <p>很喜欢专题企划的思路，不是简单的榜单式罗列，而是给每条内容找到它该在的位置。冬天那期看完，我立刻补了两部旧片。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#2f7a6b,#1a473e)">林</span><span><strong>林小满</strong><span>社区用户 · 影迷</span></span></div>
+        </article>
+        <article class="sjf-review">
+          <p>翻译与字幕的准确度让我愿意留下来。台词里那些语气上的细微差别都被保留下来了，看得出是专业团队在做。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#7a4f7e,#43294a)">阿</span><span><strong>阿岚</strong><span>日语学习者</span></span></div>
+        </article>
+        <article class="sjf-review">
+          <p>作为从业者，我认可它对原创和版权的重视，所有素材来源都写得很清楚。这点在当下尤其难得，值得信赖。</p>
+          <div class="sjf-review-who"><span class="sjf-avatar" style="background:linear-gradient(135deg,#5d7f9e,#2c4359)">王</span><span><strong>王岷</strong><span>制片人 · 从业 8 年</span></span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 榜单 + 灵感 ============ -->
+  <section class="sjf-section sjf-alt">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">RANKING &amp; IDEAS</p>
+          <h2>本周榜单与创作灵感</h2>
+          <p>热度榜与口碑榜由社区数据与编辑评分共同生成，灵感卡片供创作者参考选题方向。</p>
+        </div>
+      </div>
+      <div class="sjf-rank" style="margin-bottom:44px">
+        <div class="sjf-rank-col">
+          <h3>本周热度榜</h3>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">1</span><div class="sjf-rank-main"><strong>四组镜头讲完一场告别：日影中的留白技巧</strong><span>拉片 · 苏回</span></div><span class="sjf-rank-hot">↑ 热</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">2</span><div class="sjf-rank-main"><strong>从脚本到成片：五分钟短片的剪辑节奏</strong><span>教程 · 何岸</span></div><span class="sjf-rank-hot">↑ 12</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">3</span><div class="sjf-rank-main"><strong>沿着海岸线拍一座小镇：濑户内的三天</strong><span>纪录 · 陈屿</span></div><span class="sjf-rank-hot">↑ 8</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">4</span><div class="sjf-rank-main"><strong>与摄影师聊自然光：一场关于清晨五点的访谈</strong><span>访谈 · 编辑部访谈组</span></div><span class="sjf-rank-hot">↑ 5</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">5</span><div class="sjf-rank-main"><strong>色彩如何说话：日影中的季节配色法则</strong><span>拉片 · 苏回</span></div><span class="sjf-rank-hot">—</span></div>
+        </div>
+        <div class="sjf-rank-col">
+          <h3>口碑榜 · 编辑推荐</h3>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">1</span><div class="sjf-rank-main"><strong>拉片实验室：小津安二郎家庭场景中的固定机位</strong><span>编辑部评分 9.6</span></div><span class="sjf-rank-hot">精品</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">2</span><div class="sjf-rank-main"><strong>第一部长片：六位青年创作者的立项记录</strong><span>专题 · 9.3</span></div><span class="sjf-rank-hot">精品</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">3</span><div class="sjf-rank-main"><strong>城市影像志：深夜食堂里的东京街区</strong><span>纪录 · 9.1</span></div><span class="sjf-rank-hot">推荐</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">4</span><div class="sjf-rank-main"><strong>雪与暖炉：冬季家庭电影策展</strong><span>专题 · 9.0</span></div><span class="sjf-rank-hot">推荐</span></div>
+          <div class="sjf-rank-item"><span class="sjf-rank-no">5</span><div class="sjf-rank-main"><strong>片场的一天：一个小剧组的器材与分工</strong><span>幕后 · 8.8</span></div><span class="sjf-rank-hot">新人</span></div>
+        </div>
+      </div>
+
+      <div class="sjf-idea">
+        <div class="sjf-idea-card">
+          <h3>选题灵感 · 从一个物件开始</h3>
+          <p>如果一时找不到开头，试着聚焦一件具体的东西：一把椅子、一台旧收音机、一份便当。日影里有大量以物件承载情感的段落，你的短片也可以从这里切入。</p>
+        </div>
+        <div class="sjf-idea-card">
+          <h3>剪辑思路 · 先定呼吸再定长度</h3>
+          <p>不要先问「这个镜头该留几秒」，先问「这段情绪该如何呼吸」。同样的三秒，在安静段落里很长，在激烈段落里极短。把节奏画在纸上，往往比在时间线上试更有效。</p>
+        </div>
+        <div class="sjf-idea-card">
+          <h3>标题建议 · 具体优先于抽象</h3>
+          <p>「关于告别」不如「四组镜头讲完一场告别」，「城市记录」不如「沿着海岸线拍一座小镇」。具体的时间、地点、数量与动作，会让你的作品更容易被看见。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 企业动态 + 合作 ============ -->
+  <section class="sjf-section sjf-anchor" id="sjf-news">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">NEWSROOM</p>
+          <h2>企业动态与官方发布</h2>
+          <p>平台更新、策展发布、创作者计划与线下活动，均在此集中公布。</p>
+        </div>
+      </div>
+      <div class="sjf-news">
+        <article class="sjf-news-item">
+          <div class="sjf-news-date"><b>18</b><span>11月</span></div>
+          <div>
+            <h3>冬季策展《雪与暖炉》正式上线</h3>
+            <p>本期策展收录六部家庭题材日本电影，配套四篇导演对谈与两场社区共读活动，专题页已同步更新。</p>
+          </div>
+        </article>
+        <article class="sjf-news-item">
+          <div class="sjf-news-date"><b>20</b><span>11月</span></div>
+          <div>
+            <h3>第十二期创作者招募开启报名</h3>
+            <p>面向影像、影评、翻译与剪辑方向的创作者开放，入选者将获得策展资源与官方推荐位支持。</p>
+          </div>
+        </article>
+        <article class="sjf-news-item">
+          <div class="sjf-news-date"><b>25</b><span>11月</span></div>
+          <div>
+            <h3>导演对谈实录《长镜头里的家庭》更新</h3>
+            <p>访问对话整理稿与幕后花絮已发布，附完整时间轴与观众提问环节录音概要。</p>
+          </div>
+        </article>
+        <article class="sjf-news-item">
+          <div class="sjf-news-date"><b>02</b><span>12月</span></div>
+          <div>
+            <h3>「街角十二时辰」影像挑战投票启动</h3>
+            <p>征稿进入评审阶段，社区投票通道将于 12 月 2 日开放，优秀作品进入年度官方策展。</p>
+          </div>
+        </article>
+      </div>
+
+      <div style="height:44px"></div>
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">PARTNERS</p>
+          <h2>合作品牌与伙伴</h2>
+          <p>感谢与我们一起推动日影内容生态的机构与品牌。</p>
+        </div>
+      </div>
+      <div class="sjf-partners">
+        <span class="sjf-partner">光间影像中心</span>
+        <span class="sjf-partner">北岸放映社</span>
+        <span class="sjf-partner">青柠独立影展</span>
+        <span class="sjf-partner">岸边书店</span>
+        <span class="sjf-partner">纸月出版</span>
+        <span class="sjf-partner">城南高校影像社</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sjf-section sjf-alt sjf-anchor" id="sjf-faq">
+    <div class="sjf-wrap">
+      <div class="sjf-sec-head">
+        <div>
+          <p class="sjf-sec-kicker">HELP</p>
+          <h2>常见问题与帮助</h2>
+          <p>关于内容、投稿、账号与合作的常见疑问，都可以在这里找到答案。</p>
+        </div>
+      </div>
+      <div class="sjf-faq">
+        <details open>
+          <summary>新浪日本电影网的内容是原创的吗？</summary>
+          <p>平台以原创与正版为核心准则。编辑部自制的策划、访谈与拉片内容均为原创，创作者发布的作品由作者本人授权并承担责任；引用他人影像资料的解析内容会标注来源，并通过授权或合规方式使用。我们鼓励所有创作者在投稿时附上素材来源说明。</p>
+        </details>
+        <details>
+          <summary>如何向平台投稿自己的短片或影评？</summary>
+          <p>点击页面中的「创作者投稿」入口，填写作者信息、作品简介与素材来源即可提交。审核周期一般为 5 至 7 个工作日，通过后会由编辑与您联系进行内容校对与封面确认。首次投稿建议先阅读投稿指南，注意画面清晰度与字幕完整性。</p>
+        </details>
+        <details>
+          <summary>平台对视频清晰度有要求吗？</summary>
+          <p>建议提交 1080p 及以上清晰度的成片，横屏作品以 16:9 为标准比例；竖屏作品也可投递，但需保证主体构图完整。音频建议使用清晰的立体声混音，并附上中文字幕文件。</p>
+        </details>
+        <details>
+          <summary>我可以在平台参加影像挑战或比赛吗？</summary>
+          <p>可以。平台定期举办主题影像挑战与影像比赛，报名信息会在企业动态与专题页同步发布。参赛作品需为作者原创，且未在其他平台进行过商业授权。入选作品将获得策展推荐与线下放映机会。</p>
+        </details>
+        <details>
+          <summary>账号收藏与点赞数据会保留多久？</summary>
+          <p>收藏与点赞记录会长期保存在账号中，方便你随时回到喜欢的内容。若你希望导出个人片单，可在账号设置中生成收藏清单，平台会以表格形式提供下载。</p>
+        </details>
+        <details>
+          <summary>品牌或机构如何与平台发起合作？</summary>
+          <p>我们欢迎放映活动、内容共创、栏目共建等形式的合作。请通过页面底部的联系邮箱提供机构介绍与合作方向，编辑部会在 3 个工作日内回复，并安排进一步沟通。</p>
+        </details>
+        <details>
+          <summary>社区评论需要遵守哪些规范？</summary>
+          <p>请围绕内容本身进行讨论，尊重不同观点，避免剧透未上映作品的关键情节。对于人身攻击、侵权素材与广告信息，平台会按社区规范处理。我们的目标是让讨论保持真实、温和且有信息量。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 投稿/联系 ============ -->
+  <section class="sjf-section sjf-anchor" id="sjf-join">
+    <div class="sjf-wrap">
+      <div class="sjf-join">
+        <div>
+          <h2>成为创作者，把你的日影故事交给我们</h2>
+          <p>
+            无论你拍的是三分钟短片、一次街头记录，还是一篇认真写下的影评，
+            新浪日本电影网都愿意为你提供一个被认真阅读的位置。留下邮箱，编辑部会发送完整的投稿指南与选题建议。
+          </p>
+          <form class="sjf-join-form" id="sjfJoinForm">
+            <input type="email" id="sjfJoinEmail" placeholder="请输入你的邮箱" aria-label="投稿联系邮箱" required>
+            <button class="sjf-btn sjf-btn-primary" type="submit">获取投稿指南</button>
+          </form>
+          <p style="font-size:12.5px;color:#93a7bf;margin-top:12px">提交即表示同意我们通过邮件与你联系，仅用于投稿沟通。</p>
+        </div>
+        <div class="sjf-join-side">
+          <div class="sjf-join-contact">📮 合作邮箱 <b>brand@sjfilmmail.com</b></div>
+          <div class="sjf-join-contact">🕘 编辑值班 <b>周一至周五 10:00–18:00</b></div>
+          <div class="sjf-join-contact">📍 办公地址 <b>上海市静安区影像创意园 3 号楼</b></div>
+          <div class="sjf-join-contact">📄 投稿说明 <b>附素材来源与作者授权声明</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="sjf-footer">
+  <div class="sjf-wrap">
+    <div class="sjf-footer-grid">
+      <div class="sjf-footer-brand">
+        <div class="sjf-logo" style="margin-bottom:14px">
+          <span class="sjf-logo-mark">日</span>
+          <span class="sjf-logo-text"><strong>新浪日本电影网</strong><span>SINA JAPAN FILM</span></span>
+        </div>
+        <p>新浪日本电影网官方网站，深耕日本电影垂直领域的内容品牌。以原创、正版、高清为内容准则，持续运营高品质影像社区。</p>
+        <p style="color:#6c7f99;font-size:12.5px">品牌故事 · 官方发布 · 精品内容 · 社会责任</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#sjf-focus">视频焦点</a></li>
+          <li><a href="#sjf-stream">热门视频流</a></li>
+          <li><a href="#sjf-topics">专题企划</a></li>
+          <li><a href="#sjf-creators">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于平台</h3>
+        <ul>
+          <li><a href="#sjf-about">品牌介绍</a></li>
+          <li><a href="#sjf-notes">品牌故事</a></li>
+          <li><a href="#sjf-news">企业动态</a></li>
+          <li><a href="#sjf-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>联系我们</h3>
+        <ul>
+          <li>合作邮箱：brand@sjfilmmail.com</li>
+          <li>编辑值班：10:00–18:00</li>
+          <li>地址：上海市静安区影像创意园</li>
+          <li><a href="#sjf-join">投稿与报名入口</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sjf-footer-bottom">
+      <span>© 2016–2026 新浪日本电影网 版权所有 · 持续运营中</span>
+      <span>沪ICP备 2016081234 号 · 网络文化经营许可 · 官方网站</span>
+    </div>
+  </div>
+</footer>
+
+<button class="sjf-top" id="sjfBackTop" aria-label="回到顶部">↑</button>
+<div class="sjf-toast" id="sjfToast" role="status" aria-live="polite"></div>
+
+<div class="sjf-modal" id="sjfModal" role="dialog" aria-modal="true" aria-labelledby="sjfModalTitle">
+  <div class="sjf-modal-box">
+    <button class="sjf-modal-close" type="button" id="sjfModalClose" aria-label="关闭弹窗">✕</button>
+    <div id="sjfModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var toastEl = document.getElementById('sjfToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('sjf-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('sjf-show'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('sjfBurger');
+  var menu = document.getElementById('sjfMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('sjf-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      menu.classList.remove('sjf-open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('sjfSearchInput');
+  var searchBtn = document.getElementById('sjfSearchBtn');
+  var searchFb = document.getElementById('sjfSearchFeedback');
+  var searchPool = [
+    '拉片实验室 · 小津安二郎固定机位解析',
+    '导演对谈实录 · 长镜头里的家庭',
+    '城市影像志 · 深夜食堂里的东京街区',
+    '剪辑节奏教程 · 五分钟短片',
+    '濑户内三天纪录 · 海岸线小镇',
+    '色彩与季节 · 日影配色法则',
+    '雪与暖炉 · 冬季家庭电影策展',
+    '创作者招募 · 第十二期报名'
+  ];
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      searchFb.textContent = '请输入影片名、导演名或题材关键词，例如「家庭」「拉片」「濑户内」。';
+      searchFb.classList.add('sjf-show');
+      return;
+    }
+    var hits = searchPool.filter(function(s){ return s.indexOf(q) > -1; });
+    if(!hits.length){
+      searchFb.textContent = '暂未找到与「' + q + '」直接匹配的条目，已为你推荐：' + searchPool[0] + '；' + searchPool[1] + '。';
+    }else{
+      searchFb.textContent = '与「' + q + '」相关的内容共 ' + hits.length + ' 条：' + hits.join('；') + '。';
+    }
+    searchFb.classList.add('sjf-show');
+    toast('已为你检索社区内容');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ e.preventDefault(); doSearch(); }
+  });
+
+  /* 标签筛选 */
+  var chipBox = document.getElementById('sjfFilter');
+  var streamCards = Array.prototype.slice.call(document.querySelectorAll('#sjfStreamGrid .sjf-card'));
+  chipBox.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-sjf-filter]');
+    if(!btn) return;
+    Array.prototype.forEach.call(chipBox.querySelectorAll('.sjf-chip'), function(c){ c.classList.remove('sjf-active'); });
+    btn.classList.add('sjf-active');
+    var f = btn.getAttribute('data-sjf-filter');
+    streamCards.forEach(function(card){
+      var tag = card.getAttribute('data-sjf-tag');
+      card.style.display = (f === 'all' || tag === f) ? '' : 'none';
+    });
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-sjf-like]');
+    if(likeBtn){
+      var numEl = likeBtn.querySelector('.sjf-num');
+      var n = parseInt(numEl.textContent, 10);
+      if(likeBtn.classList.toggle('sjf-on')){
+        numEl.textContent = n + 1;
+        toast('感谢你的认可，已记录');
+      }else{
+        numEl.textContent = Math.max(0, n - 1);
+        toast('已取消点赞');
+      }
+      return;
+    }
+    var favBtn = e.target.closest('[data-sjf-fav]');
+    if(favBtn){
+      var on = favBtn.classList.toggle('sjf-on');
+      favBtn.textContent = on ? '已收藏' : '收藏';
+      toast(on ? '已加入你的收藏夹' : '已移出收藏夹');
+      return;
+    }
+    var repBtn = e.target.closest('[data-sjf-report]');
+    if(repBtn){
+      openModal(
+        '<h3 id="sjfModalTitle">内容反馈</h3>' +
+        '<p class="sjf-modal-sub">如发现内容有误或存在侵权素材，请告诉我们，编辑部会尽快核查。</p>' +
+        '<label for="sjfRepType">反馈类型</label>' +
+        '<select id="sjfRepType"><option>内容信息有误</option><option>素材来源存疑</option><option>字幕翻译问题</option><option>其他建议</option></select>' +
+        '<label for="sjfRepText">补充说明</label>' +
+        '<textarea id="sjfRepText" rows="4" placeholder="请简要描述问题所在的时间点或具体内容"></textarea>' +
+        '<div class="sjf-modal-actions"><button class="sjf-btn sjf-btn-primary" type="button" id="sjfRepSend">提交反馈</button></div>'
+      );
+      var send = document.getElementById('sjfRepSend');
+      send.addEventListener('click', function(){
+        closeModal();
+        toast('反馈已提交，编辑会尽快核查');
+      });
+      return;
+    }
+    var shareBtn = e.target.closest('[data-sjf-share]');
+    if(shareBtn){
+      var title = shareBtn.getAttribute('data-sjf-share');
+      openModal(
+        '<h3 id="sjfModalTitle">分享给朋友</h3>' +
+        '<p class="sjf-modal-sub">' + title + '</p>' +
+        '<div class="sjf-share-list">' +
+        '<button type="button" data-sjf-copy>复制链接</button>' +
+        '<button type="button" data-sjf-channel="微信">分享到微信</button>' +
+        '<button type="button" data-sjf-channel="微博">分享到微博</button>' +
+        '<button type="button" data-sjf-channel="QQ">分享到 QQ</button>' +
+        '</div>'
+      );
+      return;
+    }
+  });
+
+  /* 弹窗内分享动作 */
+  document.addEventListener('click', function(e){
+    var copyBtn = e.target.closest('[data-sjf-copy]');
+    if(copyBtn){
+      var link = 'https://sjfilmmail.example.com/share/curation';
+      var done = function(){ closeModal(); toast('链接已复制，欢迎分享给影迷朋友'); };
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(done).catch(function(){
+          closeModal(); toast('复制失败，请手动记录链接');
+        });
+      }else{
+        closeModal(); toast('链接已准备好，请手动分享');
+      }
+      return;
+    }
+    var chBtn = e.target.closest('[data-sjf-channel]');
+    if(chBtn){
+      var ch = chBtn.getAttribute('data-sjf-channel');
+      closeModal();
+      toast('已生成' + ch + '分享卡片，请前往对应应用粘贴');
+      return;
+    }
+  });
+
+  /* 通用弹窗 */
+  var modal = document.getElementById('sjfModal');
+  var modalContent = document.getElementById('sjfModalContent');
+  function openModal(html){
+    modalContent.innerHTML = html;
+    modal.classList.add('sjf-show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('sjf-show');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('sjfModalClose').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && modal.classList.contains('sjf-show')) closeModal(); });
+
+  /* 投稿表单 */
+  var joinForm = document.getElementById('sjfJoinForm');
+  joinForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var email = document.getElementById('sjfJoinEmail').value.trim();
+    if(!email || email.indexOf('@') < 1){
+      toast('请填写有效的邮箱地址');
+      return;
+    }
+    toast('投稿指南已发送至 ' + email);
+    joinForm.reset();
+  });
+
+  /* 回到顶部 */
+  var backTop = document.getElementById('sjfBackTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600){ backTop.classList.add('sjf-show'); }
+    else{ backTop.classList.remove('sjf-show'); }
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+                </html>
